@@ -1,0 +1,148 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --containerWidth: 900px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+
+    text-align: center;
+    background-color: #fffde7;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.info h1 {
+    font-size: 4rem;
+}
+
+.info h2 {
+    font-size: 2rem;
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: min(80%, var(--containerWidth));
+    height: 700px;
+
+    background-color: #1e2f97;
+    border: solid .6rem navy;
+    /* flex-wrap: wrap; */
+
+    border-radius: 2rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: .6rem;
+    /* gap: 10px; */
+}
+
+.col:hover {
+    /* background-color: #4adede; */
+    background-color: #1aa7ec;
+}
+
+.circle {
+    height: 80px;
+    width: 80px;
+
+    background-color: white;
+    border: solid .35rem navy;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.redPiece {
+    background-color: red;
+}
+
+.yellowPiece {
+    background-color: yellow;
+}
+
+
+.shiningPiece {
+    animation: shine 1s infinite alternate;
+}
+
+.layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    opacity: .9;
+}
+
+.menu {
+    position: absolute;
+    width: min(80%, var(--containerWidth));
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #0E2431;
+    border-radius: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 1rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+#back, #restart  {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border: none;
+    background-color: #b2c2cf;
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+@keyframes shine {
+    from {
+        box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+    }
+    to {
+        box-shadow: 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow;
+    }
+}
